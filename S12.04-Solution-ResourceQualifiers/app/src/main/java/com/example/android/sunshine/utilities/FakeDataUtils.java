@@ -41,7 +41,7 @@ public class FakeDataUtils {
     public static void insertFakeData(Context context) {
         //Get today's normalized date
         long today = SunshineDateUtils.normalizeDate(System.currentTimeMillis());
-        List<ContentValues> fakeValues = new ArrayList<ContentValues>();
+        List<ContentValues> fakeValues = new ArrayList<>();
         //loop over 7 days starting today onwards
         for(int i=0; i<7; i++) {
             fakeValues.add(FakeDataUtils.createTestWeatherContentValues(today + TimeUnit.DAYS.toMillis(i)));
